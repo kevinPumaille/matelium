@@ -1,0 +1,30 @@
+.perfil{
+    background-color: grey;
+}
+
+ion-button {
+    width: 100%;
+    --background: var(--ion-color-secondary);
+    --background-hover: var(--ion-color-footerColor);
+    --background-activated: var(--ion-color-footerColor);
+    --background-focused: #88f4be;
+
+    --color: #fafafa;
+
+    --border-radius: 0;
+    --border-color: none;
+    --border-style: none;
+    --border-width: none;
+
+    --box-shadow: none;
+
+
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+  }
+
+  ion-icon{
+    background-color: var(--ion-color-footerColor);
+    border-radius: 50%;
+    padding: 5px;
+  }

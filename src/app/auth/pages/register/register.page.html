@@ -1,0 +1,46 @@
+<ion-content >
+
+  <div class="logo">
+    <img src="../../../../assets/logo-white.svg" alt="" srcset="">
+  </div>
+
+  <div class="contenedor">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
+      <div class="form-contenedor">
+        <ion-item class="espacioRelleno">
+          <!-- <ion-label label="Email" position="floating">email</ion-label> -->
+          <ion-input label="" placeholder="usuario" type="text" formControlName="usuario"></ion-input>
+        </ion-item>
+    
+        <ion-item class="espacioRelleno">
+          <!-- <ion-label position="floating">contraseña</ion-label> -->
+          <ion-input label="" placeholder="email" type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="espacioRelleno">
+          <!-- <ion-label position="floating">contraseña</ion-label> -->
+          <ion-input label="" placeholder="contraseña" type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-button class="btn-iniciarSesion" expand="block">Registrar</ion-button>
+        <!-- <ion-button color="success" class="btn-iniciarSesion" expand="block" color="primary" type="submit" [disabled]="!loginForm.valid">Iniciar sesión</ion-button> -->
+      </div>
+    </form>
+
+  </div>
+  
+  <div class="fondo-primario"></div>
+  <div class="fondo-terciario"></div>
+
+
+  
+
+</ion-content>
+
+
+<ion-footer class="custom-footer">
+  <div class="custom-footer ">
+      <p>¿Ya tienes una cuenta? <a [routerLink]="['/auth/login']">Iniciar Sesión</a></p>
+  </div>
+</ion-footer>

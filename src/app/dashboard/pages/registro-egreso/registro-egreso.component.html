@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="medium">
+    <ion-title>Registro de egreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="medium">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
+  <section class="form-registro-egreso ion-padding">
+    <p>Categoria</p>
+
+    <ion-item no-lines>
+      <ion-select aria-label="Fruit" placeholder="Seleccione Categoria" formControlName="categoria" justify="end">
+        <ion-select-option value="ropa">ropa</ion-select-option>
+        <ion-select-option value="transporte">transporte</ion-select-option>
+        <ion-select-option value="restaurante">restaurante</ion-select-option>
+        <ion-select-option value="comida de casa">comida de casa</ion-select-option>
+        <ion-select-option value="otros">otros</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <p>Monto</p>
+
+    <ion-item class="espacioRelleno">
+      <ion-input label="Ingrese monto" type="number"  placeholder="S./0.00" formControlName="monto" ></ion-input>
+    </ion-item>
+
+    <ion-button  class="btn-registrarEgreso" expand="block" type="submit">Guardar</ion-button>
+
+  </section>
+</form>
+</ion-content>
+
+<ion-alert
+  [isOpen]="aviso"
+  [header]="'Alerta de categoria: '+loginForm.value.categoria"
+  [message]="mensajeAviso"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"
+></ion-alert>
+
+<ion-toast [isOpen]="toast == false" message="Se agrego correctamente" [duration]="1000"></ion-toast>

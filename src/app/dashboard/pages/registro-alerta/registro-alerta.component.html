@@ -1,0 +1,52 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard/tabsprincipal/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Alerta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="medium">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
+  <section class="form-registro-egreso ion-padding">
+    <h1>Mes de Agosto</h1>
+    <p>Tipo de alerta</p>
+
+    <ion-item no-lines>
+      <ion-select aria-label="Fruit" placeholder="Seleccione Tipo de Alerta" formControlName="tipoAlerta"
+        justify="end">
+        <ion-select-option value="limiteegreso">limite de egreso</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <p>Categoria</p>
+
+    <ion-item no-lines>
+      <ion-select aria-label="Fruit" placeholder="Seleccione Categoria" formControlName="categoria"
+        justify="end">
+        @for( categoria of categoriasAll; track $index){
+          <ion-select-option [value]="categoria">{{categoria}}</ion-select-option>
+        }
+        <!-- <ion-select-option value="ropa">ropa</ion-select-option>
+        <ion-select-option value="transporte">transporte</ion-select-option>
+        <ion-select-option value="restaurante">restaurante</ion-select-option>
+        <ion-select-option value="comida de casa">comida de casa</ion-select-option>
+        <ion-select-option value="otros">otros</ion-select-option> -->
+      </ion-select>
+    </ion-item>
+
+    <p>Monto</p>
+
+    <ion-item class="espacioRelleno">
+      <ion-input label="Ingrese monto"  placeholder="Enter text" formControlName="monto"></ion-input>
+    </ion-item>
+
+    <ion-button class="btn-registrarEgreso" expand="block" type="submit">Agregar</ion-button>
+
+  </section>
+</form>
+</ion-content>
+
+<ion-toast [isOpen]="toast == false" message="Se agrego correctamente" [duration]="1000"></ion-toast>

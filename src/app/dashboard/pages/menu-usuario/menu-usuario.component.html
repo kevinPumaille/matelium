@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="secondary">
+
+  <ion-grid >
+    <ion-row class="ion-justify-content-around ">
+      <ion-col size="12" >
+        <!-- <ion-nav-link router-direction="back" component="app-mi-perfil"> -->
+          <ion-button [routerLink]="['/','dashboard','tabsprincipal','miperfil']" size="small">
+            <ion-icon name="person-circle-outline"></ion-icon>
+
+            <ion-grid>
+              <ion-row class="ion-justify-content-around  ion-align-items-center ">
+                <ion-col size="12">
+                  <p class="ion-text-start ion-padding-start">Mi perfil</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+      <!-- </ion-nav-link> -->
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-around ">
+      <ion-col size="12" class="">
+        <ion-button size="small">
+          <ion-icon name="log-out-outline"></ion-icon>
+
+          <ion-grid>
+            <ion-row class="ion-justify-content-around  ion-align-items-center ">
+              <ion-col size="12">
+                <p class="ion-text-start ion-padding-start">Salir</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+</ion-content>

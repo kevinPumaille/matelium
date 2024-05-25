@@ -1,0 +1,93 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="medium">
+     <p class="nombreUsuario">Hola {{name}}</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="medium">
+
+  <section>
+
+      <h2>Mes Actual</h2>
+
+    <div class="diagrama">
+      <canvas #canvas></canvas>
+    </div>
+  </section>
+
+  <section>
+    <h2>Categorias</h2>
+
+    <ion-grid >
+
+      <ion-row class="ion-justify-content-around ">
+        <ion-col size="5" class="ion-margin-bottom " >
+
+          <ion-button expand="block" size="small" [routerLink]="['/','dashboard','tabsprincipal','registroalerta']">
+            
+            
+            <ion-grid>
+              <ion-col class=" ">
+                <ion-row size="12">
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </ion-row>
+                <ion-row size="12">
+                  <p class="ion-text-start">Agregar Alertas</p>
+                </ion-row>
+              </ion-col>
+            </ion-grid>
+
+          </ion-button>
+
+        </ion-col>
+
+        <ion-col size="5" class="ion-margin-bottom " >
+
+          <ion-button expand="block" size="small" [routerLink]="['/','dashboard','tabsprincipal','reportemensual']">
+            
+
+            <ion-grid>
+              <ion-col class=" ">
+                <ion-row size="12">
+                  <ion-icon name="analytics-outline"></ion-icon>
+                </ion-row>
+                <ion-row size="12">
+                  <p class="ion-text-start">Reportes Mensuales</p>
+                </ion-row>
+              </ion-col>
+            </ion-grid>
+
+          </ion-button>
+
+        </ion-col>
+
+        <ion-col size="5" class="ion-margin-bottom " [routerLink]="['/','dashboard','tabsprincipal','misalertas']">
+
+          <ion-button expand="block" size="small">
+            
+            <div class="cantidad">{{numAlertas}}</div>
+            <ion-grid>
+              <ion-col class=" ">
+                <ion-row size="12">
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </ion-row>
+                <ion-row size="12">
+                  <p class="ion-text-start">Mis Alertas</p>
+                </ion-row>
+              </ion-col>
+            </ion-grid>
+
+          </ion-button>
+
+        </ion-col>
+
+        <ion-col size="5">
+          <div></div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </section>
+
+</ion-content>

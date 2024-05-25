@@ -1,0 +1,55 @@
+ion-item {
+    border-radius: 20px;
+}
+
+ion-button {
+    --background: #A79277;
+    --background-hover: #d7cbba;
+    --background-activated: #b19d82;
+    --background-focused: #A79277;
+
+    --color: white;
+
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}
+
+.btn-registrarEgreso {
+    margin-top: 30px;
+}
+
+.form-registro-egreso {
+    margin-top: 80px;
+    height: 350px;
+    background-color: var(--ion-color-secundario);
+    border-radius: 20px;
+}
+
+.diagrama{
+    height: auto;
+    padding: 10px;
+    // background-color: #fafafa;
+    border-radius: 20px;
+}
+
+// ion-row{
+//     background-color: var(--ion-color-secundario);
+// }
+
+.categoria-option{
+    display: flex;
+    background-color: var(--ion-color-secundario);
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    padding: 0px 5px 0px 5px;
+}
+
+span{
+    width: 70px;
+    margin-left: 6px;
+    color: grey;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fafafa;
+}

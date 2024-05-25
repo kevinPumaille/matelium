@@ -1,0 +1,36 @@
+ion-item {
+    border-radius: 20px;
+}
+
+ion-button {
+    --background: #A79277;
+    --background-hover: #d7cbba;
+    --background-activated: #b19d82;
+    --background-focused: #A79277;
+
+    --color: white;
+
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}
+
+.btn-registrarEgreso {
+    margin-top: 30px;
+}
+
+.form-registro-egreso {
+    margin-top: 10px;
+    height: 120px;
+    background-color: var(--ion-color-medium);
+    border-radius: 20px;
+}
+
+.mes-actual{
+    border-radius: 20px;
+    background-color: var(--ion-color-medium);
+    margin-top: 10px;
+}
+
+ion-icon{
+    color: red;
+}

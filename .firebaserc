@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "gestionfinanciera-dfa00"
+  },
+  "targets": {
+    "gestionfinanciera-dfa00": {
+      "hosting": {
+        "app": [
+          "gestionfinanciera-dfa00"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard/tabsprincipal/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Alertas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="secondary">
+
+  <section class="mes-actual ion-padding">
+    <h1>Mes de Agosto</h1>
+  </section>
+
+  @for( alerta of alertasAll; track $index){
+  <section class="form-registro-egreso ion-padding-horizontal">
+
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+
+        <ion-col>
+          <ion-grid>
+            <ion-row>
+              <ion-col>{{alerta.tipoalerta}}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Categoria</ion-col>
+              <ion-col>{{alerta.categoria}}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Monto</ion-col>
+              <ion-col>{{alerta.monto}}</ion-col>
+            </ion-row>
+            
+          </ion-grid>
+        </ion-col>
+
+        <ion-col size="auto">
+          <ion-button size="small" (click)="eliminarAlerta(alerta.id)">
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+    
+  </section>
+}
+</ion-content>

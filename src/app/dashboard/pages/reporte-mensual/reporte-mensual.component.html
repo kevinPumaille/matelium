@@ -1,0 +1,109 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard/tabsprincipal/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reporte Mensual</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="medium">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
+  <section class="form-registro-egreso ion-padding">
+    <p>Mes</p>
+
+    <ion-item no-lines>
+      <ion-select aria-label="Fruit" placeholder="Seleccione mes" formControlName="mes"
+        justify="end">
+        <ion-select-option value="1">enereo</ion-select-option>
+        <ion-select-option value="2">febrero</ion-select-option>
+        <ion-select-option value="3">marzo</ion-select-option>
+        <ion-select-option value="4">abril</ion-select-option>
+        <ion-select-option value="5">mayo</ion-select-option>
+        <ion-select-option value="6">junio</ion-select-option>
+        <ion-select-option value="7">julio</ion-select-option>
+        <ion-select-option value="8">agosto</ion-select-option>
+        <ion-select-option value="9">setiembre</ion-select-option>
+        <ion-select-option value="10">octubre</ion-select-option>
+        <ion-select-option value="11">noviembre</ion-select-option>
+        <ion-select-option value="12">diciembre</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <p>Año</p>
+
+    <ion-item no-lines>
+      <ion-select aria-label="Fruit" placeholder="Seleccione Año" formControlName="anio"
+        justify="end">
+        <ion-select-option value="2024">2024</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button id="open-modal" class="btn-registrarEgreso" expand="block" type="submit">Buscar</ion-button>
+
+  </section>
+</form>
+
+
+  <!-- <ion-button id="open-modal" expand="block">Open</ion-button> -->
+
+  <ion-modal trigger="open-modal" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="medium">
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">
+              <ion-icon name="refresh-outline"></ion-icon>
+            </ion-button>
+            
+          </ion-buttons>
+          <ion-title>Agosto, 2024</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content [fullscreen]="true" class="ion-padding" color="medium">
+
+        <section>
+          <h2>Mes Actual</h2>
+          <div class="diagrama">
+            <canvas id="barcharta"></canvas>
+          </div>
+        </section>
+
+        <section>
+          <h2>Categorias</h2>
+          <!-- {{prueba.outerHTML }} -->
+          <ion-grid>
+            <ion-col>
+              @for(categ of categorias; track $index){
+                <ion-row >
+                  <div class="categoria-option">
+                    <p>{{categ[0]}}</p>
+                    <span>{{categ[1]}}</span>
+                  </div>
+                </ion-row>
+              }
+              <!-- <ion-row>
+                <div class="categoria-option">
+                  <p>Ropa</p>
+                  <span>s./120</span>
+                </div>
+              </ion-row>
+              <ion-row>
+                <div class="categoria-option">
+                  <p>Restaurante nuevo</p>
+                  <span>s./120</span>
+                </div>
+              </ion-row> -->
+            </ion-col>
+          </ion-grid>
+        </section>
+      </ion-content>
+
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
