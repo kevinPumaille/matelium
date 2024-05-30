@@ -14,6 +14,8 @@ export class LoginPage implements OnInit {
   private router = inject( Router );
   private loginService = inject( LoginServiceService );
 
+  mostrarPassword = false;
+
   loginForm: FormGroup;
   name: string = 'Login';
   constructor() { }
@@ -25,6 +27,10 @@ export class LoginPage implements OnInit {
       password: ['', Validators.required]
     });
 
+  }
+
+  togglePassword() {
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
   async onSubmit() {

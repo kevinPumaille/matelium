@@ -1,46 +1,62 @@
-<ion-content >
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="logo">
+<ion-content class="ion-padding">
+
+  <!-- <div class="logo">
     <img src="../../../../assets/logo-white.svg" alt="" srcset="">
+  </div> -->
+  <div>
+    <p class="crear-cuenta">Crear Cuenta</p>
   </div>
 
-  <div class="contenedor">
+  <div >
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
-      <div class="form-contenedor">
+      <ion-list class="list-md">
         <ion-item class="espacioRelleno">
-          <!-- <ion-label label="Email" position="floating">email</ion-label> -->
-          <ion-input label="" placeholder="usuario" type="text" formControlName="usuario"></ion-input>
-        </ion-item>
-    
-        <ion-item class="espacioRelleno">
-          <!-- <ion-label position="floating">contraseña</ion-label> -->
-          <ion-input label="" placeholder="email" type="email" formControlName="email"></ion-input>
+
+          <ion-input class="input-text" placeholder="nombre de usuario" formControlName="email">
+            <ion-icon class="input-icon" slot="start" aria-hidden="true" name="person-outline"></ion-icon>
+            <!-- <ion-icon class="input-icon" slot="start" name="mail-outline" aria-hidden="true"></ion-icon> -->
+          </ion-input>
+
         </ion-item>
 
         <ion-item class="espacioRelleno">
-          <!-- <ion-label position="floating">contraseña</ion-label> -->
-          <ion-input label="" placeholder="contraseña" type="password" formControlName="password"></ion-input>
+          <ion-input class="input-text" placeholder="correo" formControlName="email">
+            <ion-icon class="input-icon" slot="start" name="mail-outline" aria-hidden="true"></ion-icon>
+          </ion-input>
         </ion-item>
 
+        <ion-item class="espacioRelleno">
+        <ion-input class="input-text" type="{{ mostrarPassword ? 'text' : 'password' }}" placeholder="contraseña" formControlName="password">
+          <ion-icon class="input-icon" slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+          <ion-button class="verPass" fill="clear" slot="end" aria-label="Show/hide" (click)="togglePassword()">
+            <ion-icon slot="icon-only" [name]="mostrarPassword ? 'eye' : 'eye-off'" aria-hidden="true"></ion-icon>
+          </ion-button>
+        </ion-input>
+      </ion-item>
         <ion-button class="btn-iniciarSesion" expand="block">Registrar</ion-button>
         <!-- <ion-button color="success" class="btn-iniciarSesion" expand="block" color="primary" type="submit" [disabled]="!loginForm.valid">Iniciar sesión</ion-button> -->
-      </div>
+      </ion-list>
     </form>
 
   </div>
-  
-  <div class="fondo-primario"></div>
-  <div class="fondo-terciario"></div>
+
+  <!-- <div class="fondo-primario"></div>
+  <div class="fondo-terciario"></div> -->
 
 
-  
+
 
 </ion-content>
 
 
-<ion-footer class="custom-footer">
+<ion-footer class="custom-footer ion-no-border">
   <div class="custom-footer ">
-      <p>¿Ya tienes una cuenta? <a [routerLink]="['/auth/login']">Iniciar Sesión</a></p>
+    <p>¿Ya tienes una cuenta? <a [routerLink]="['/auth/login']">Iniciar Sesión</a></p>
   </div>
 </ion-footer>

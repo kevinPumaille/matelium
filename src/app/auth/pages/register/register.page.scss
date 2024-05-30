@@ -1,77 +1,58 @@
-
-.logo{
-    position: absolute;
-    width: 20%;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+ion-content {
+    --background: var(--ion-color-primario1);
 }
 
-.contenedor {
-    width: 80%;
-    height: 360px;
-    border-radius: 40px;
-    position: absolute;
-    z-index: 3;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 35px 25px 12px 25px;
+ion-toolbar {
+    --background: var(--ion-color-primario1);
 }
 
-ion-button {
-    --background: #A79277;
-    --background-hover: #d7cbba;
-    --background-activated: #b19d82;
-    --background-focused: #A79277;
-  
-    --color: white;
-  
-    --padding-top: 10px;
-    --padding-bottom: 10px;
-  }
+.list-md {
+    background-color: var(--ion-color-primario1);
+}
+
+.crear-cuenta {
+    font-size: 2.5rem;
+    color: var(--ion-color-btn1);
+    font-weight: bold;
+}
+
 
 .espacioRelleno {
-    padding-right: 16px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.342);
     margin-bottom: 15px;
+    --background: var(--ion-color-primario1);
+}
+
+.input-icon {
+    color: var(--ion-color-btn1);
+}
+
+.input-text {
+    color: #9cb8b6;
 }
 
 .btn-iniciarSesion {
-    margin-top: 40px;
+    --background: var(--ion-color-btn1);
+    --color: var(--ion-color-primario1);
+    margin-top: 30px;
+    font-weight: bold;
 }
 
-.fondo-primario {
-    position: absolute;
-    width: 100%;
-    height: 70%;
-    
-    background-color: var(--ion-color-primario);
-}
-
-.fondo-terciario {
-    position: absolute;
-    width: 100%;
-    height: 70%;
-    bottom: 0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: var(--ion-color-terciario);
+.verPass {
+    --color: var(--ion-color-btn1);
+    --background: var(--ion-color-primario1);
 }
 
 .custom-footer p {
     font-size: 13px;
     margin: 0px;
     padding: 20px;
-    color: white;
-    background-color: var(--ion-color-terciario);
+    color: #9cb8b6;
+    background-color: var(--ion-color-primario1);
     text-align: center;
 }
 
 .custom-footer p a {
-    color: var(--ion-color-primario);
+    color: var(--ion-color-btn1);
     text-decoration: none;
 }

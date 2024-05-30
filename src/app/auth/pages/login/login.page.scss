@@ -1,73 +1,57 @@
-#container{
-    width: 80%;
-    height: 260px;
-    border-radius: 40px;
-    position: absolute;
-    z-index: 3;
-    top: 77%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+ion-content {
+    --background: var(--ion-color-primario1);
+}
+
+#container {
     padding: 35px 25px 12px 25px;
 }
 
-.espacioRelleno {
-    padding-right: 16px;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.342);
-    margin-bottom: 15px;
-}
-
-.logo{
-    position: absolute;
-    top: 30%;
-    left: 50%;
+.logo {
     transform: translate(-50%, -50%);
     z-index: 2;
+}
+
+.espacioRelleno {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    --background: var(--ion-color-primario1);
+}
+
+.list-md{
+    background-color: var(--ion-color-primario1);
+}
+
+
+.verPass{
+    --color: var(--ion-color-btn1);
+    --background: var(--ion-color-primario1);
+}
+
+.input-icon{
+    color: var(--ion-color-btn1);
+}
+
+.input-text{
+    color: #9cb8b6;
+}
+
+.btn-iniciarSesion {
+    --background: var(--ion-color-btn1);
+    --color: var(--ion-color-primario1);
+    margin-top: 30px;
+    font-weight: bold;
 }
 
 .custom-footer p {
     font-size: 13px;
     margin: 0px;
     padding: 20px;
-    color: white;
-    background-color: var(--ion-color-primario);
+    color: #9cb8b6;
+    background-color: var(--ion-color-primario1);
     text-align: center;
 }
 
-.fondo-terciario {
-    position: absolute;
-    width: 100%;
-    height: 70%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: var(--ion-color-terciario);
-}
-
-.fondo-primario {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--ion-color-primario);
-}
-
-.btn-iniciarSesion {
-    margin-top: 30px;
-}
-
-ion-button {
-    --background: #A79277;
-    --background-hover: #d7cbba;
-    --background-activated: #b19d82;
-    --background-focused: #A79277;
-  
-    --color: white;
-  
-    --padding-top: 10px;
-    --padding-bottom: 10px;
-  }
-
-  .custom-footer p a {
-    color: var(--ion-color-terciario);
+.custom-footer p a {
+    color: var(--ion-color-btn1);
     text-decoration: none;
 }

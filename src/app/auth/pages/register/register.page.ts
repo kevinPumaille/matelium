@@ -12,6 +12,8 @@ export class RegisterPage implements OnInit {
 
   loginForm: FormGroup;
 
+  mostrarPassword = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +24,10 @@ export class RegisterPage implements OnInit {
       password: ['', Validators.required]
     });
 
+  }
+
+  togglePassword() {
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
   onSubmit(): void {
