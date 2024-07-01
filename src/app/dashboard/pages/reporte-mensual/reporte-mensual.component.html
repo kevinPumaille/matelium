@@ -1,5 +1,5 @@
 <ion-header >
-  <ion-toolbar color="medium">
+  <ion-toolbar color="light">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/dashboard/tabsprincipal/home"></ion-back-button>
     </ion-buttons>
@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="medium">
+<ion-content [fullscreen]="true" class="ion-padding-horizontal" color="light">
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
   <section class="form-registro-egreso ion-padding">
     <p>Mes</p>
@@ -50,7 +50,7 @@
   <ion-modal trigger="open-modal" >
     <ng-template>
       <ion-header>
-        <ion-toolbar color="medium">
+        <ion-toolbar color="light">
           <ion-buttons slot="start">
             <ion-button (click)="cancel()">
               <ion-icon name="refresh-outline"></ion-icon>
@@ -64,7 +64,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-content [fullscreen]="true" class="ion-padding" color="medium">
+      <ion-content [fullscreen]="true" class="ion-padding" color="light">
 
         <section>
           <h2>Mes Actual</h2>
@@ -81,7 +81,7 @@
               @for(categ of categorias; track $index){
                 <ion-row >
                   <div class="categoria-option">
-                    <p>{{categ[0]}}</p>
+                    <p class="text-color">{{categ[0]}}</p>
                     <span>{{categ[1]}}</span>
                   </div>
                 </ion-row>

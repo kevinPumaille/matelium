@@ -21,7 +21,7 @@ ion-button {
 .form-registro-egreso {
     margin-top: 80px;
     height: 350px;
-    background-color: var(--ion-color-secundario);
+    // background-color: var(--ion-color-secundario);
     border-radius: 20px;
 }
 
@@ -52,4 +52,8 @@ span{
     border-radius: 20px;
     text-align: center;
     background-color: #fafafa;
+}
+
+.text-color{
+    color: white;
 }
